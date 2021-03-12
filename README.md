@@ -1,1 +1,1 @@
-# DATA2410-1-21V-Datanettverk-og-skytjenester---PortofolioExam1
+# DATA2410-Datanettverk-og-skytjenester-PortofolioExam1
