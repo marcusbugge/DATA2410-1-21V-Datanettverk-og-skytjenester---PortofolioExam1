@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73fa9834-9ce3-4423-ba80-755f5fb07f64" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pFcRx2OqLUHw0piWYCj1ERzsKh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test2" />
+      <recent name="Portofolio" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bruker\Desktop\portofolioexam2\src\Portofolio1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client (2)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test2.Client" />
+      <module name="portofolioexam2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TCP_CLIENT.Client" />
+      <module name="portofolioexam2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="botHandler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test2.Server" />
+      <module name="portofolioexam2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server" />
+      <module name="portofolioexam2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TCP_SERVER.Server" />
+      <module name="portofolioexam2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="botHandler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Portofolio.Server" />
+      <module name="portofolioexam2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Portofolio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Server (2)" />
+      <item itemvalue="Application.Client (2)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client (2)" />
+        <item itemvalue="Application.Server (2)" />
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73fa9834-9ce3-4423-ba80-755f5fb07f64" name="Default Changelist" comment="" />
+      <created>1614782274759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614782274759</updated>
+      <workItem from="1614782278165" duration="14003000" />
+      <workItem from="1614806351292" duration="6989000" />
+      <workItem from="1614854278477" duration="4909000" />
+      <workItem from="1615033615406" duration="12540000" />
+      <workItem from="1615117932738" duration="24006000" />
+      <workItem from="1615285853612" duration="9000" />
+      <workItem from="1615285904072" duration="9000" />
+      <workItem from="1615286766382" duration="12560000" />
+      <workItem from="1615370699003" duration="26850000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1428" y="169" key="#Project_Structure" timestamp="1614782281514">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1428" y="169" key="#Project_Structure/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1614782281514" />
+    <state x="-1523" y="203" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615287158827">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1523" y="203" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615287158827" />
+    <state x="397" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615119738310" />
+    <state x="760" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1615463943422">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1160" y="244" key="#com.intellij.ide.util.MemberChooser/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1614795198084" />
+    <state x="760" y="251" key="#com.intellij.ide.util.MemberChooser/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615463943422" />
+    <state x="-1159" y="385" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1615286863658">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1159" y="385" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615286863658" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615119185412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615119185412" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1615489877288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615385267050" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615489877288" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1615489877287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.center/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615385267049" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615489877287" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1615489877287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.left/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615385267049" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615489877287" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1615489877287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.right/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615385267049" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615489877287" />
+    <state width="1651" height="328" key="GridCell.Tab.1.bottom" timestamp="1615067126556">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state width="1651" height="328" key="GridCell.Tab.1.bottom/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615067126556" />
+    <state width="1651" height="328" key="GridCell.Tab.1.bottom/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615049003418" />
+    <state width="1651" height="328" key="GridCell.Tab.1.center" timestamp="1615067126555">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state width="1651" height="328" key="GridCell.Tab.1.center/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615067126555" />
+    <state width="1651" height="328" key="GridCell.Tab.1.center/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615049003418" />
+    <state width="1651" height="328" key="GridCell.Tab.1.left" timestamp="1615067126555">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state width="1651" height="328" key="GridCell.Tab.1.left/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615067126555" />
+    <state width="1651" height="328" key="GridCell.Tab.1.left/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615049003418" />
+    <state width="1651" height="328" key="GridCell.Tab.1.right" timestamp="1615067126556">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state width="1651" height="328" key="GridCell.Tab.1.right/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615067126556" />
+    <state width="1651" height="328" key="GridCell.Tab.1.right/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615049003418" />
+    <state x="-1497" y="123" key="SettingsEditor" timestamp="1615287155057">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1497" y="123" key="SettingsEditor/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615287155057" />
+    <state x="423" y="130" key="SettingsEditor/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615046344410" />
+    <state x="509" y="290" width="877" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1615048940971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="509" y="290" width="877" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615048940971" />
+    <state x="338" y="162" key="new project wizard" timestamp="1615046312289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1582" y="155" key="new project wizard/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1614802962206" />
+    <state x="338" y="162" key="new project wizard/-1920.-7.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615046312289" />
+    <state x="-1235" y="167" key="refactoring.ChangeSignatureDialog" timestamp="1614782469665">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1235" y="167" key="refactoring.ChangeSignatureDialog/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1614782469665" />
+    <state x="-1321" y="256" key="run.anything.popup" timestamp="1614783183848">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1321" y="256" key="run.anything.popup/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1614783183848" />
+    <state x="-1374" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1615373807268">
+      <screen x="-1920" y="-7" width="1920" height="1040" />
+    </state>
+    <state x="-1374" y="265" width="672" height="678" key="search.everywhere.popup/-1920.-7.1920.1040/0.0.1920.1040@-1920.-7.1920.1040" timestamp="1615373807268" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
