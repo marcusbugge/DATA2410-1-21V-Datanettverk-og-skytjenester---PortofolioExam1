@@ -85,6 +85,6 @@ public class ClientReaderThread implements Runnable {
 
         System.out.println("Me: " + botAnswer);
 
-        pOut.println(botName + ": " + botAnswer);
+        pOut.println(listHandler.capitalizeFirstLetter(botName) + ": " + botAnswer);
     }
 }

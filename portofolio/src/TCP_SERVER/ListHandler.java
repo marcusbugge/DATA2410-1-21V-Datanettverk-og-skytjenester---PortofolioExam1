@@ -30,6 +30,7 @@ public class ListHandler {
         return usedBots;
     }
 
+    // Moves the connected from available to online
     public void moveBotToUsedList(String botName) {
         String name = capitalizeFirstLetter(botName);
         boolean found = false;
@@ -45,6 +46,7 @@ public class ListHandler {
         }
     }
 
+    // Moves the connected from online to available
     public void moveBotFromUsedList(String botName) {
         String name = capitalizeFirstLetter(botName);
         boolean found = false;
@@ -61,6 +63,7 @@ public class ListHandler {
         }
     }
 
+    // Function that capitalizes the first letter of a sentence
     public String capitalizeFirstLetter(String botName) {
         return botName.substring(0, 1).toUpperCase() + botName.substring(1);
     }
