@@ -1,23 +1,22 @@
-package TCP_SERVER;
+package TCP_SERVER.threads;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.ArrayList;
 
 /**
  * Handles all the connections between the clients and server. Always waiting for a response from the clients and
  * send it to all the connected clients is the list.
  */
 
-public class ServerClientThread implements Runnable {
-    private Socket client;
+public class ServerReaderThread implements Runnable {
+    public Socket client;
     private BufferedReader inClient;
     PrintWriter out;
 
-    public static CopyOnWriteArrayList<ServerClientThread> arrayListClients;
+    public static ArrayList<ServerReaderThread> arrayListClients;
 
-    public ServerClientThread(Socket clientSocket,
-                              CopyOnWriteArrayList<ServerClientThread> arrayListClients) throws IOException {
+    public ServerReaderThread(Socket clientSocket, ArrayList<ServerReaderThread> arrayListClients) throws IOException {
 
         this.client = clientSocket;
         this.arrayListClients = arrayListClients;
@@ -50,7 +49,7 @@ public class ServerClientThread implements Runnable {
                     }
 
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    break;
                 }
             }
 
@@ -63,9 +62,8 @@ public class ServerClientThread implements Runnable {
         }
     }
 
-
-    private void sendToAll(String messageToClient) {
-        for (ServerClientThread client : arrayListClients) {
+    public void sendToAll(String messageToClient) {
+        for (ServerReaderThread client : arrayListClients) {
             if (client.client != this.client) {
                 client.out.println(messageToClient);
             }

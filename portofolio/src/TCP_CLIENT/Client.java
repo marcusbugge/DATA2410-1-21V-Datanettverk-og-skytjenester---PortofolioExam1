@@ -1,6 +1,6 @@
 package TCP_CLIENT;
 
-import botHandler.ListHandler;
+import TCP_SERVER.ListHandler;
 
 import java.io.*;
 import java.net.Socket;
@@ -16,16 +16,12 @@ public class Client {
     private int server_port;
     private String botName;
 
-    static ArrayList<String> availableBots;
-    static ArrayList<String> usedBots;
-
     public Client(String ip, int port, String navn) throws IOException {
         this.server_ip = ip;
         this.server_port = port;
         this.botName = navn;
 
         Socket socket = new Socket(server_ip, server_port);
-        System.out.println("Connected to " + botName + " .... Waiting for message from server");
 
         ClientReaderThread con = new ClientReaderThread(socket, botName);
         new Thread(con).start();
@@ -34,46 +30,26 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
 
-        ListHandler list = new ListHandler();
-
-        if (list.getAvailableBots().isEmpty()) {
-            list.addBots();
-        }
-
-        ArrayList<String> availableBots = list.getAvailableBots();
-        ArrayList<String> usedBots = list.getUsedBots();
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String botToStart = br.readLine().toLowerCase();
+        new Client("localhost", 9999, botToStart);
 
-        System.out.println("Which bot do you want to start?");
-        System.out.println("Available bots: " + availableBots);
 
-        String botToStart = br.readLine();
-
-        for (String bot : availableBots) {
-            if (bot.equals(botToStart)) {
-                new Client("localhost", 9999, botToStart);
-                list.moveBotToUsedList(bot);
-                break;
-            }
-        }
-
-        /*
-        Client client = null;
+        /*Client client = null;
 
         String ip = args[0];
         int port = Integer.parseInt(args[1]);
         String botName = args[2];
 
-        for (String bot : allBots) {
+        for (String bot : availableBots) {
             if (botName.equals(bot)) {
                 client = new Client(ip, port, botName);
-                onlineBots.add(botName);
+                list.moveBotToUsedList(botName);
             }
         }
         if (client == null) {
-            System.out.println("Available bots: " + allBots);
-        }*/
-
+            System.out.println("Available bots: " + availableBots);
+        }
+        */
     }
 }

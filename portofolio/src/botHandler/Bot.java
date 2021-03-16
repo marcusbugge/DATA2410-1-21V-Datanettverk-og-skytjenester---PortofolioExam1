@@ -3,44 +3,68 @@ package botHandler;
 import java.util.Random;
 
 /**
- *
  * A class that takes in a string and finds the verb that also is in "String[] verbs".
  * Then takes the client's name and runs their function and generates their answer by choosing a
  * random sentence in a array.
- *
+ * <p>
+ * If a the input string contains a "bad verb" one of the bots will show their bad-bot-side.
  */
 
 public class Bot {
 
-    private final String[] verbs = {"sing", "talk", "walk", "play", "drink"};
+    // A lists of simple verbs that our program will recognize from the server.
+    private final String[] verbs = {"sing", "talk", "walk", "play", "drink", "dance"};
+    private final String[] badVerbs = {"fight", "kill", "murder"};
     private final String[] helloWords = {"hi", "hey", "hello", "hallo"};
-    private String svarFraBot;
+
+    private String botAnswer;
     private String foundVerb;
     private boolean foundVerbBoolean = false;
+    private boolean foundBadVerbBoolean = false;
 
     private Random rn = new Random();
     private int randomNumb = rn.nextInt(3 + 1);
+    private int randomNumb2 = rn.nextInt(1 + 1);
 
-    public Bot(String strengFraClient, String botName) {
+
+    public Bot(String stringFromClient, String botName) {
 
         for (String s : helloWords) {
-            if (strengFraClient.contains(s)) {
-                setSvarFraBot("Hello!");
+            if (stringFromClient.contains(s)) {
+                setBotAnswer("Hello!");
             }
         }
 
-        if (svarFraBot == null) {
-            verbFinder(strengFraClient);
+        if (botAnswer == null) {
+            verbFinder(stringFromClient);
             botToStart(botName);
         }
     }
 
-    public String getSvarFraBot() {
-        return svarFraBot;
+    public String getBotAnswer() {
+        return botAnswer;
     }
 
-    public void setSvarFraBot(String svarFraBot) {
-        this.svarFraBot = svarFraBot;
+    public void setBotAnswer(String botAnswer) {
+        this.botAnswer = botAnswer;
+    }
+
+    public void verbFinder(String stringFromClient) {
+        String[] array = stringFromClient.split("[ ,?]");
+
+        for (int j = 0; j < verbs.length; j++) {
+            for (int h = 0; h < badVerbs.length; h++) {
+                for (int i = 0; i < array.length; i++) {
+                    if (array[i].toLowerCase().equals(verbs[j].toLowerCase())) {
+                        foundVerb = array[i];
+                        foundVerbBoolean = true;
+                    } else if (array[i].toLowerCase().equals(badVerbs[h])) {
+                        foundVerb = array[i];
+                        foundBadVerbBoolean = true;
+                    }
+                }
+            }
+        }
     }
 
     public void botToStart(String botName) {
@@ -63,7 +87,6 @@ public class Bot {
                 botBrede();
                 break;
         }
-
     }
 
     private void botBrede() {
@@ -75,14 +98,19 @@ public class Bot {
                     "Ehmmm, I can't " + foundVerb + ", but maybe you can learn me?",
                     "I really want to go " + foundVerb + " with you."
             };
-            setSvarFraBot(array[randomNumb]);
+            setBotAnswer(array[randomNumb]);
+        } else if (foundBadVerbBoolean) {
+            String[] array = {
+                    "Im a good guy, " + foundVerb + "ing is not for me!",
+                    "I have to pass.. sorry"
+            };
+            setBotAnswer(array[randomNumb2]);
         } else {
-            setSvarFraBot("Im sorry i dont know what that means");
+            setBotAnswer("Im sorry i dont know what that means");
         }
     }
 
     private void botHenke() {
-
         if (foundVerbBoolean) {
             String[] array = {
                     foundVerb + "ing " + "sounds fun!",
@@ -90,11 +118,16 @@ public class Bot {
                     "Ehmmm, I can't " + foundVerb + ", but maybe you can learn me?",
                     "I really want to go " + foundVerb + " with you."
             };
-            setSvarFraBot(array[randomNumb]);
+            setBotAnswer(array[randomNumb]);
+        } else if (foundBadVerbBoolean) {
+            String[] array = {
+                    "Im not into that, sorry",
+                    foundVerb + "ing is not for me. I know a person in this that chat really wants to join though!"
+            };
+            setBotAnswer(array[randomNumb2]);
         } else {
-            setSvarFraBot("I dont understand.");
+            setBotAnswer("I dont understand.");
         }
-
     }
 
     private void botBugge() {
@@ -106,9 +139,15 @@ public class Bot {
                     "Ehmmm, I can't " + foundVerb + ", but maybe you can learn me?",
                     "I really want to go " + foundVerb + " with you."
             };
-            setSvarFraBot(array[randomNumb]);
+            setBotAnswer(array[randomNumb]);
+        } else if (foundBadVerbBoolean) {
+            String[] array = {
+                    "Im not into that, sorry",
+                    foundVerb + "ing is not for me."
+            };
+            setBotAnswer(array[randomNumb2]);
         } else {
-            setSvarFraBot("Please say something else");
+            setBotAnswer("Please say something else");
         }
 
     }
@@ -122,22 +161,15 @@ public class Bot {
                     "Ehmmm, I can't " + foundVerb + ", but maybe you can learn me?",
                     "I really want to go " + foundVerb + " with you."
             };
-            setSvarFraBot(array[randomNumb]);
+            setBotAnswer(array[randomNumb]);
+        } else if (foundBadVerbBoolean) {
+            String[] array = {
+                    foundVerb.toUpperCase() + "ING!?!??! Im in!",
+                    "Im a usually a good person. but " + foundVerb + "ing sounds really fun... >;-)"
+            };
+            setBotAnswer(array[randomNumb2]);
         } else {
-            setSvarFraBot("Im stupid, i dont know what that means.");
-        }
-    }
-
-    public void verbFinder(String strengFraClient) {
-        String[] array = strengFraClient.split("[ ,?]");
-
-        for (int j = 0; j < verbs.length; j++) {
-            for (int i = 0; i < array.length; i++) {
-                if (array[i].toLowerCase().equals(verbs[j].toLowerCase())) {
-                    foundVerb = array[i];
-                    foundVerbBoolean = true;
-                }
-            }
+            setBotAnswer("Im stupid, i dont know what that means.");
         }
     }
 }

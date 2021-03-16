@@ -1,10 +1,13 @@
 package TCP_SERVER;
 
+import TCP_SERVER.threads.ConnectionThread;
+import TCP_SERVER.threads.ServerInputThread;
+import TCP_SERVER.threads.ServerReaderThread;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,15 +21,14 @@ public class Server {
     private final ServerSocket serverSocket;
     private Socket socket;
 
-    public static ArrayList<String> availableBots = new ArrayList<>();
-    public static ArrayList<String> usedBots = new ArrayList<>();
-    public static CopyOnWriteArrayList<ServerClientThread> listClient = new CopyOnWriteArrayList<>();
-
+    public static ArrayList<ServerReaderThread> listClient = new ArrayList<>();
     static ExecutorService pool = Executors.newFixedThreadPool(5);
 
     public Server(int port) throws IOException {
-
         serverSocket = new ServerSocket(port);
+
+        ListHandler list = new ListHandler();
+        list.addBots();
 
         ServerInputThread th = new ServerInputThread(listClient);
         new Thread(th).start();
@@ -42,15 +44,13 @@ public class Server {
                 }
 
                 socket = serverSocket.accept();
-                System.out.println();
-                System.out.println(" ------- A bot joined the room from " + socket.getRemoteSocketAddress() + " ------- ");
-                System.out.println();
 
-                ServerClientThread serverClientThread = new ServerClientThread(socket, listClient);
+                ConnectionThread con = new ConnectionThread(socket, list, listClient);
+                new Thread(con).start();
 
-                listClient.add(serverClientThread);
-
-                pool.execute(serverClientThread);
+                ServerReaderThread serverReaderThread = new ServerReaderThread(socket, listClient);
+                listClient.add(serverReaderThread);
+                pool.execute(serverReaderThread);
 
             }
         } catch (Exception e) {

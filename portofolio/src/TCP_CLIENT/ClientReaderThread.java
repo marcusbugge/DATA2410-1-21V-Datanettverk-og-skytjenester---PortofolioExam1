@@ -1,5 +1,6 @@
 package TCP_CLIENT;
 
+import TCP_SERVER.ListHandler;
 import botHandler.Bot;
 
 import java.io.BufferedReader;
@@ -17,14 +18,22 @@ import java.net.Socket;
 public class ClientReaderThread implements Runnable {
     Socket server;
     BufferedReader in;
+    BufferedReader keyboard;
     PrintWriter pOut;
     String botName;
+    ListHandler listHandler = new ListHandler();
 
     public ClientReaderThread(Socket s, String name) throws IOException {
         server = s;
         in = new BufferedReader(new InputStreamReader(server.getInputStream()));
+        keyboard = new BufferedReader(new InputStreamReader(System.in));
         pOut = new PrintWriter(server.getOutputStream(), true);
         this.botName = name;
+
+
+        // Sends the connected client's name to the server so the server can check if the name is already connected
+        // If it is connected the connection will just end.
+        pOut.println(botName);
 
     }
 
@@ -33,9 +42,12 @@ public class ClientReaderThread implements Runnable {
 
         try {
             while (true) {
-                    String fromServer = in.readLine();
 
-                    if (fromServer != null) {
+                String fromServer = in.readLine();
+
+                if (fromServer.equals("end")) System.exit(0);
+
+                if (fromServer != null) {
 
                     if (fromServer.contains("/kick " + botName)) {
                         break;
@@ -49,10 +61,9 @@ public class ClientReaderThread implements Runnable {
                     } else {
                         System.out.println(fromServer);
                         if (fromServer.contains("/kick")) {
-
                             System.out.println();
-                            System.out.println("Me: Byebye...");
-                            pOut.println(botName + ": " + "Byebye...");
+                            System.out.println("Me: Adios...");
+                            pOut.println(listHandler.capitalizeFirstLetter(botName) + ": " + "Adios...");
 
                         }
                     }
@@ -68,9 +79,9 @@ public class ClientReaderThread implements Runnable {
         }
     }
 
-    private void generateBot(String fromServer) throws InterruptedException {
+    private void generateBot(String fromServer) {
         Bot bot = new Bot(fromServer, botName);
-        String botAnswer = bot.getSvarFraBot();
+        String botAnswer = bot.getBotAnswer();
 
         System.out.println("Me: " + botAnswer);
 
