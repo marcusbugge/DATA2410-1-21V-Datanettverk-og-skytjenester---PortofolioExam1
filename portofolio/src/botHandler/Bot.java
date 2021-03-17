@@ -13,7 +13,7 @@ import java.util.Random;
 public class Bot {
 
     // A lists of simple verbs that our program will recognize from the server.
-    private final String[] verbs = {"sing", "talk", "walk", "play", "drink", "dance"};
+    private final String[] verbs = {"sing", "talk", "walk", "play", "drink", "dance", "fish"};
     private final String[] badVerbs = {"fight", "kill", "murder"};
     private final String[] helloWords = {"hi", "hey", "hello", "hallo"};
 

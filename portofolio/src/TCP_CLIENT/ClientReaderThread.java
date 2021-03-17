@@ -13,6 +13,9 @@ import java.net.Socket;
  * A thread that executes when a new client is connected to the server.
  * Always expects a line from the server, then handles servers' response, and sends back their
  * answer of choice back to the server
+ *
+ * Thread sleeps for 1000ms (1 second) before generating their answer and sends back to server
+ *
  */
 
 public class ClientReaderThread implements Runnable {
@@ -25,10 +28,11 @@ public class ClientReaderThread implements Runnable {
 
     public ClientReaderThread(Socket s, String name) throws IOException {
         server = s;
+        this.botName = name;
         in = new BufferedReader(new InputStreamReader(server.getInputStream()));
         keyboard = new BufferedReader(new InputStreamReader(System.in));
         pOut = new PrintWriter(server.getOutputStream(), true);
-        this.botName = name;
+
 
 
         // Sends the connected client's name to the server so the server can check if the name is already connected
@@ -79,7 +83,9 @@ public class ClientReaderThread implements Runnable {
         }
     }
 
-    private void generateBot(String fromServer) {
+    private void generateBot(String fromServer) throws InterruptedException {
+
+        Thread.sleep(1000);
         Bot bot = new Bot(fromServer, botName);
         String botAnswer = bot.getBotAnswer();
 
